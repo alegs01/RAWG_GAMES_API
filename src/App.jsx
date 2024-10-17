@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from 'react';
+import Filters from './components/Filters';
+import GameList from './components/GameList';
+import { fetchInitialGames, fetchGames } from './services/apiRawrg';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [games, setGames] = useState([]);
+  const [selectedGenre, setSelectedGenre] = useState('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const initialGames = await fetchInitialGames(); // Cargar juegos iniciales
+      setGames(initialGames);
+    };
+    fetchData();
+  }, []);
+
+  // Esta función se ejecutará cuando el usuario seleccione un género
+  const handleGenreChange = async (event) => {
+    const genreId = event.target.value;
+    setSelectedGenre(genreId);
+
+    if (genreId) {
+      const filteredGames = await fetchGames(genreId); // Hacer consulta de juegos por género
+      setGames(filteredGames); // Actualizar juegos según el género seleccionado
+    } else {
+      const initialGames = await fetchInitialGames(); // Volver a cargar los juegos iniciales si se deselecciona
+      setGames(initialGames);
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="app">
+      <Filters onGenreChange={handleGenreChange} /> {/* Pasar el manejador de cambio de género */}
+      <GameList games={games} /> {/* Pasar la lista de juegos */}
+    </div>
+  );
+};
 
-export default App
+export default App;

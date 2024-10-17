@@ -1,0 +1,62 @@
+/* GameList.css */
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #070720;
+  color: #ffffff;
+}
+
+.game-card {
+  width: 250px;
+  background-color: #1e1e2f;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.game-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 2px solid #242437;
+}
+
+.game-card-details {
+  padding: 15px;
+}
+
+.game-card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0;
+}
+
+.game-card-released {
+  font-size: 14px;
+  color: #b3b3b3;
+  margin: 8px 0 12px;
+}
+
+.game-card-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.game-card-platforms span {
+  background-color: #3b3b52;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+}

@@ -1,0 +1,14 @@
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  margin: 0 10px;
+}
