@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Filters = ({ onGenreChange }) => {
+const Filters = ({ onGenreChange, onPlatformChange }) => {
   const genres = [
     { id: 4, name: "Action" },
     { id: 51, name: "Indie" },
@@ -21,7 +21,16 @@ const Filters = ({ onGenreChange }) => {
     { id: 28, name: "Board Games" },
     { id: 34, name: "Educational" },
     { id: 17, name: "Card" }
-  ];
+  ]
+    const platforms= [
+        { id: 4, name: "PC" },
+    { id: 187, name: "PlayStation 5" },
+    { id: 1, name: "Xbox One" },
+    { id: 18, name: "PlayStation 4" },
+    { id: 7, name: "Nintendo Switch" },
+    { id: 3, name: "iOS" },
+    { id: 21, name: "Android" },
+    ];
 
   return (
     <div className="filters">
@@ -33,12 +42,21 @@ const Filters = ({ onGenreChange }) => {
           </option>
         ))}
       </select>
+            <select onChange={onPlatformChange}>
+        <option value="">All platforms</option>
+        {platforms.map(platform => (
+          <option key={platform.id} value={platform.id}>
+            {platform.name}
+          </option>
+        ))}
+      </select>
     </div>
   );
 };
 
 Filters.propTypes = {
-  onGenreChange: PropTypes.func.isRequired, // Validación de la función
+  onGenreChange: PropTypes.func.isRequired,
+  onPlatformChange: PropTypes.func.isRequired,
 };
 
 export default Filters;

@@ -19,19 +19,19 @@ export const fetchInitialGames = async () => {
   }
 };
 
-export const fetchGames = async (genreId) => {
+export const fetchGames = async (genreId = "", platformId = "") => {
   try {
-    const response = await axios.get(`${BASE_URL}/games`, {
-      params: {
-        key: API_KEY,
-        genres: genreId, // Filtro por género
-        page_size: 20,
-        ordering: "-rating",
-      },
-    });
-    return response.data.results;
+    const params = {
+      key: API_KEY,
+      page_size: 20,
+      ...(genreId && { genres: genreId }),
+      ...(platformId && { platforms: platformId }),
+    };
+
+    const response = await axios.get(`${BASE_URL}/games`, { params });
+    return response.data.results; // Devuelve los resultados de la API
   } catch (error) {
-    console.error("Error fetching games by genre:", error);
+    console.error("Error fetching games:", error);
     return [];
   }
 };
