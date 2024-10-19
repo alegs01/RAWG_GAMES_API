@@ -1,0 +1,26 @@
+.home {
+  height: 60vh; /* Ocupa toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente el contenido */
+  background: rgb(34, 136, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 136, 195, 1) 0%,
+    rgba(45, 253, 204, 1) 100%
+  );
+  color: white; /* Color del texto */
+  text-align: left; /* Centra el texto */
+  padding: 15px; /* Espaciado interno */
+  padding-left: 5rem;
+}
+
+.title {
+  font-family: "Permanent Marker";
+  font-size: 3rem; /* Tamaño del título */
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.description {
+  font-size: 1.5rem; /* Tamaño de la descripción */
+}
