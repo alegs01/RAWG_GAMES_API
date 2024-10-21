@@ -5,7 +5,7 @@ const Footer = () => {
     /* Footer */
     <footer className="footer">
       <div className="div-footer-cr">
-        <p className="logo-footer"><strong>Game</strong> Stats</p>
+        <p className="logo-footer"><strong>Games</strong> API</p>
         <p className="text-footer">© 2024 Game Stats. All Rights Reserved.</p>
       </div>
 

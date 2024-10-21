@@ -5,6 +5,9 @@ footer {
   display: flex;
   height: 9rem;
   justify-content: space-evenly;
+  bottom: 0;
+  position: relative;
+  padding: 20px;
 }
 
 .div-footer-cr img {

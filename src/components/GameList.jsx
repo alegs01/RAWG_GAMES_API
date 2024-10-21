@@ -13,6 +13,7 @@ const GameList = ({ games }) => {
         <GameCard
           key={game.id}
           name={game.name}
+          metacritic={game.metacritic}
           released={game.released}
           background_image={game.background_image}
           platforms={game.platforms}
@@ -27,6 +28,7 @@ GameList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
+      metacritic: PropTypes.string.isRequired,
       released: PropTypes.string.isRequired,
       background_image: PropTypes.string.isRequired,
       platforms: PropTypes.arrayOf(

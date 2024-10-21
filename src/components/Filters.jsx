@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import Form from 'react-bootstrap/Form';
+import './Filters.css'
 
 const Filters = ({ onGenreChange, onPlatformChange }) => {
   const genres = [
@@ -34,22 +36,22 @@ const Filters = ({ onGenreChange, onPlatformChange }) => {
 
   return (
     <div className="filters">
-      <select onChange={onGenreChange}>
+      <Form.Select onChange={onGenreChange}>
         <option value="">All Genres</option>
         {genres.map(genre => (
           <option key={genre.id} value={genre.id}>
             {genre.name}
           </option>
         ))}
-      </select>
-            <select onChange={onPlatformChange}>
+      </Form.Select>
+            <Form.Select onChange={onPlatformChange}>
         <option value="">All platforms</option>
         {platforms.map(platform => (
           <option key={platform.id} value={platform.id}>
             {platform.name}
           </option>
         ))}
-      </select>
+      </Form.Select>
     </div>
   );
 };

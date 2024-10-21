@@ -1,0 +1,80 @@
+/* Homepage.css */
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+.homepage {
+  display: flex;
+  color: rgb(225, 225, 225); /* Color del texto */
+  min-height: 100vh; /* Asegura que ocupe al menos toda la altura de la ventana */
+}
+
+.title-name {
+  font-family: "Permanent Marker";
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #070720 !important;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  background: rgb(34, 136, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 136, 195, 1) 0%,
+    rgba(45, 253, 204, 1) 100%
+  );
+  padding: 1rem;
+  color: black;
+}
+
+.game-carousel {
+  max-width: 1000px; /* Ancho máximo del carrusel */
+  height: 500px; /* Altura del carrusel */
+  overflow: hidden; /* Oculta cualquier contenido que exceda el área del carrusel */
+  margin: 0 auto; /* Centra el carrusel en la página */
+}
+
+.game-carousel img {
+  width: 100%; /* La imagen ocupa el 100% del ancho del carrusel */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-height: 500px; /* Limita la altura de la imagen */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+}
+
+.featured-games,
+.news {
+  margin-bottom: 40px;
+}
+
+.load-more {
+  display: block; /* Para centrar el botón */
+  margin: 20px auto; /* Margen automático para centrar */
+  padding: 10px 20px; /* Espaciado interno */
+  background-color: #0056b3; /* Color de fondo para el botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background-color 0.3s; /* Transición para el cambio de color */
+}
+
+.load-more:hover {
+  background-color: #004494; /* Color más oscuro al pasar el ratón */
+}
+
+h2 {
+  margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.news {
+  background-color: #17172e;
+  padding: 3rem;
+}
+
+.featured-games {
+  background-color: #17172e;
+  padding: 3rem;
+}

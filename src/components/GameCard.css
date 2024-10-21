@@ -5,8 +5,8 @@
   padding: 20px;
   margin: 10px;
   border-radius: 8px;
-  color: white; /* Asegúrate de que el texto sea legible */
-  height: 300px; /* Ajusta la altura según lo necesites */
+  color: white;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
