@@ -34,9 +34,9 @@ const Metacritic = () => {
   };
 
   return (
-    <div>
+    <div className='content'>
       <Sidebar></Sidebar>
-      <h1>Mejores Calificados</h1>
+      <h1>Mejor Metacritic</h1>
       <Filters onGenreChange={handleGenreChange} onPlatformChange={handlePlatformChange} />
       <GameList games={games} />
       {games.length > 0 && (

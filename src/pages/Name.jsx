@@ -34,9 +34,9 @@ const Name = () => {
   };
 
   return (
-    <div>
+    <div className='content'>
       <Sidebar></Sidebar>
-      <h1>Mejores Calificados</h1>
+      <h1>Clasificación por Nombre</h1>
       <Filters onGenreChange={handleGenreChange} onPlatformChange={handlePlatformChange} />
       <GameList games={games} />
       {games.length > 0 && (

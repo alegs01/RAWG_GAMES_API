@@ -3,6 +3,7 @@ import { fetchGames } from '../services/apiRawrg';
 import GameList from '../components/GameList';
 import Filters from '../components/Filters';
 import Sidebar from '../components/SideBar';
+import './BestRated.css'
 
 const BestRated = () => {
   const [games, setGames] = useState([]);
@@ -34,9 +35,9 @@ const BestRated = () => {
   };
 
   return (
-    <div>
+    <div className='content'>
       <Sidebar></Sidebar>
-      <h1>Mejores Calificados</h1>
+      <h1>Mejores Rating</h1>
       <Filters onGenreChange={handleGenreChange} onPlatformChange={handlePlatformChange} />
       <GameList games={games} />
       {games.length > 0 && (

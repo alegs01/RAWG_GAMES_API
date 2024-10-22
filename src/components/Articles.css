@@ -1,18 +1,18 @@
 /* Articles.css */
 .news-card {
-  background-color: #1f1f42; /* Azul oscuro */
-  color: white; /* Texto blanco para mayor contraste */
+  background-color: #1f1f42;
+  color: white;
   border: solid;
-  border-width: 0.5px; /* Sin borde */
-  border-radius: 10px; /* Bordes redondeados */
-  transition: transform 0.3s; /* Animación suave al pasar el ratón */
+  border-width: 0px;
+  border-radius: 10px;
+  transition: transform 0.3s;
 }
 
 .news-card:hover {
-  transform: scale(1.05); /* Aumentar ligeramente al pasar el ratón */
+  transform: scale(1.05);
 }
 
 .news-card img {
-  border-top-left-radius: 8px; /* Bordes redondeados en la parte superior */
+  border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }

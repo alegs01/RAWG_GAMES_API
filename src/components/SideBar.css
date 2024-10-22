@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 150px; /* Ancho ajustado */
+  width: 150px;
   background-color: #070720;
   padding: 20px;
   transition: width 0.3s ease;
@@ -15,7 +15,7 @@
 }
 
 .sidebar.closed {
-  width: 60px; /* Sidebar cerrada es más delgada */
+  width: 60px;
 }
 
 .toggle-btn {

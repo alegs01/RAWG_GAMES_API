@@ -15,17 +15,17 @@ const GameCard = ({ name, metacritic, released, background_image, platforms }) =
 };
 
 GameCard.propTypes = {
-  name: PropTypes.string.isRequired, // Nombre es obligatorio y debe ser string
+  name: PropTypes.string.isRequired,
   metacritic: PropTypes.string.isRequired, 
-  released: PropTypes.string.isRequired, // Fecha de lanzamiento es obligatoria
-  background_image: PropTypes.string.isRequired, // La imagen de fondo es obligatoria
+  released: PropTypes.string.isRequired,
+  background_image: PropTypes.string.isRequired,
   platforms: PropTypes.arrayOf(
     PropTypes.shape({
       platform: PropTypes.shape({
         name: PropTypes.string.isRequired,
       }).isRequired,
     })
-  ).isRequired, // Validación de plataformas
+  ).isRequired,
 };
 
 export default GameCard;

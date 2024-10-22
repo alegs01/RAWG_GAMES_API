@@ -1,20 +1,15 @@
-/* Homepage.css */
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
-.homepage {
-  display: flex;
+.content {
   color: rgb(225, 225, 225);
   min-height: 100vh;
-}
-
-.title-name {
-  font-family: "Permanent Marker";
-}
-
-.content {
-  flex: 1;
   padding: 20px;
-  background-color: #070720 !important;
+  flex: 1;
+}
+
+h1 {
+  font-family: "Permanent Marker";
+  text-align: center;
 }
 
 header {
@@ -28,25 +23,6 @@ header {
   );
   padding: 1rem;
   color: black;
-}
-
-.game-carousel {
-  max-width: 1000px;
-  height: 500px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.game-carousel img {
-  width: 100%;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
-}
-
-.featured-games,
-.news {
-  margin-bottom: 40px;
 }
 
 .load-more {
@@ -69,12 +45,11 @@ h2 {
   margin-bottom: 20px;
 }
 
-.news {
-  background-color: #17172e;
-  padding: 3rem;
+.filters {
+  margin-bottom: 40px;
 }
 
-.featured-games {
+.game-list {
   background-color: #17172e;
   padding: 3rem;
 }
