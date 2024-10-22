@@ -10,10 +10,12 @@ import GameDetailed from '../pages/Carousel1';
 import Name from '../pages/Name';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 
 const App = () => {
   return (
+    <ErrorBoundary>
     <Router>
       <div>
         <Routes>
@@ -29,6 +31,7 @@ const App = () => {
         <Footer />
       </div>
     </Router>
+    </ErrorBoundary>
   );
 };
 
