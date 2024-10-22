@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Sidebar.css';
+import './SideBar.css';
 import PropTypes from 'prop-types';
 
 const Sidebar = ({ onNewsClick }) => {
