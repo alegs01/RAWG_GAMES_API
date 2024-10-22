@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+footer {
+  background-color: #213565;
+  display: flex;
+  height: 9rem;
+  justify-content: space-evenly;
+  bottom: 0;
+  position: relative;
+  padding: 20px;
+}
+
+.div-footer-cr img {
+  height: 3rem;
+  width: 3rem;
+
+  margin: 1rem;
+}
+
+.text-footer {
+  color: #cddcfe;
+  font-size: 0.8rem;
+}
+
+.div-footer-cr {
+  padding-left: 1rem;
+}
+
+.div-footer-terms {
+  color: #cddcfe;
+  font-size: 0.8rem;
+}
+
+.div-footer-terms ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  font-family: var(--title-font);
+  font-weight: bold;
+}
+
+.div-footer-terms ul li a:hover {
+  text-decoration: underline;
+}
+
+.div-footer-social {
+  color: #cddcfe;
+  font-size: 0.8rem;
+}
+
+.socials {
+  padding-left: 1rem;
+  text-decoration: none;
+  color: aliceblue;
+  font-family: var(--title-font);
+  font-weight: bold;
+}
+
+.socials:hover {
+  text-decoration: underline;
+}
+
+.logo-footer {
+  font-family: "Permanent Marker";
+  font-size: x-large;
+  color: #cddcfe;
+}

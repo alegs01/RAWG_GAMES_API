@@ -1,0 +1,14 @@
+/* GameCard.css */
+.game-card {
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  color: white;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

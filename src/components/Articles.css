@@ -1,0 +1,18 @@
+/* Articles.css */
+.news-card {
+  background-color: #1f1f42;
+  color: white;
+  border: solid;
+  border-width: 0px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+}
+
+.news-card img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}

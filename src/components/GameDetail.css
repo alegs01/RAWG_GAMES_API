@@ -1,0 +1,35 @@
+/* GameDetail.css */
+.game-detail {
+  color: #e1e1e1;
+  padding: 20px;
+  background-color: #070720;
+}
+
+.game-detail img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.game-detail h1 {
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 20px;
+}
+
+.platforms,
+.genres {
+  margin-top: 20px;
+}
+
+span {
+  background-color: #333;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #070720 !important;
+}
