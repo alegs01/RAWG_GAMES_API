@@ -1,4 +1,3 @@
-/* Estilos para la estructura del layout */
 .app-container {
   display: flex;
 }
@@ -33,7 +32,6 @@
   margin-top: 20px;
 }
 
-/* Estilos para el contenido principal donde se renderizan los juegos */
 .content {
   flex-grow: 1;
   padding: 20px;

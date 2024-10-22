@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Filters from '../components/Filters';
 import Sidebar from '../components/SideBar';
 import GameList from '../components/GameList';
@@ -24,16 +25,14 @@ const Home = () => {
   }, [selectedGenre, selectedPlatform]);
   // Función para manejar el cambio de género
   const handleGenreChange = (event) => {
-    const genreId = event.target.value; // Obtener el ID del género seleccionado
+    const genreId = event.target.value;
     setSelectedGenre(genreId);
-    // Aquí puedes agregar lógica para filtrar los juegos según el género seleccionado
   };
 
   // Función para manejar el cambio de plataforma
   const handlePlatformChange = (event) => {
-    const platformId = event.target.value; // Obtener el ID de la plataforma seleccionada
+    const platformId = event.target.value; 
     setSelectedPlatform(platformId);
-    // Aquí puedes agregar lógica para filtrar los juegos según la plataforma seleccionada
   };
 
     const loadMoreGames = async () => {
@@ -58,17 +57,20 @@ const Home = () => {
         {/* Carrusel de Imágenes */}
         <Carousel fade className="game-carousel">
           <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="https://www.hardreset.info/media/resetinfo/2024/233/3ad20ae6e86d4f7b90de2c6d4a6abd0b.jpg"
-              alt="Black Myth Wukong"
-            />
-            <Carousel.Caption>
-              <h3>Black Myth Wukong</h3>
-              <p>Aventura épica basada en la mitología china.</p>
-            </Carousel.Caption>
+            <Link to="/game/481913">
+              <img
+                className="d-block w-100"
+                src="https://www.hardreset.info/media/resetinfo/2024/233/3ad20ae6e86d4f7b90de2c6d4a6abd0b.jpg"
+                alt="Black Myth Wukong"
+              />
+              <Carousel.Caption>
+                <h3>Black Myth Wukong</h3>
+                <p>Aventura épica basada en la mitología china.</p>
+              </Carousel.Caption>
+            </Link>
           </Carousel.Item>
           <Carousel.Item>
+            <Link to="/game/616688">
             <img
               className="d-block w-100"
               src="https://media.vandal.net/m/11-2023/16/2023111611513126_1.jpg"
@@ -78,8 +80,10 @@ const Home = () => {
               <h3>Core Keeper</h3>
               <p>Explora, construye y sobrevive en un mundo subterráneo.</p>
             </Carousel.Caption>
+            </Link>
           </Carousel.Item>
           <Carousel.Item>
+            <Link to="/game/962020">
             <img
               className="d-block w-100"
               src="https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5Rmy8w4e4mlCugxsmI7ow6/c57cab3aa52ed0d55fbff4920a785d77/swo-keyart-thumbnail-960x540.jpg"
@@ -89,6 +93,7 @@ const Home = () => {
               <h3>Star Wars Outlaws</h3>
               <p>Conviértete en un ladrón en el universo Star Wars.</p>
             </Carousel.Caption>
+            </Link>
           </Carousel.Item>
         </Carousel>
         </header>
