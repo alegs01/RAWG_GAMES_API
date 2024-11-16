@@ -1,17 +1,9 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './SideBar.css';
 import PropTypes from 'prop-types';
 
-const Sidebar = ({ onNewsClick }) => {
+const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
-
-  const navigate = useNavigate();
-
-  const handleNewsClick = () => {
-    navigate('/');
-    onNewsClick();
-  };
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -31,7 +23,7 @@ const Sidebar = ({ onNewsClick }) => {
           <li><button className="sidebar-button" onClick={() => window.location.href = '/released-this-year'}>Lanzados Este Año</button></li>
           <li><button className="sidebar-button" onClick={() => window.location.href = '/metacritic'}>Mejores Criticas</button></li>
           <li><button className="sidebar-button" onClick={() => window.location.href = '/name'}>Por nombre</button></li>
-          <li><button onClick={handleNewsClick}>Noticias</button></li>
+          <li><button className="sidebar-button" onClick={() => window.location.href = '/News'}>Noticias</button></li>
         </ul>
       )}
     </div>

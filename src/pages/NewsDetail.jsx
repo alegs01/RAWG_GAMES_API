@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom';
-import Sidebar from '../components/SideBar';
+import "./Home.css";
 
 const NewsDetail = () => {
   const location = useLocation();
@@ -10,9 +10,8 @@ const NewsDetail = () => {
   const randomText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro itaque alias minus exercitationem similique sed? Itaque inventore fugiat sunt sed, minima explicabo. Ad vero vel odio necessitatibus, error rerum eveniet.';
 
   return (
-    <div>
-      <Sidebar></Sidebar>
-    <div className="news-detail container">
+    <div className='homepage'>
+    <div className="content">
       <h1>{title}</h1>
       <img src={imageUrl} alt={title} className="img-fluid" />
       <h2>Contenido Aleatorio</h2>

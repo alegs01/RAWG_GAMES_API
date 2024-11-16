@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { fetchGames } from '../services/apiRawrg';
 import GameList from '../components/GameList';
 import Filters from '../components/Filters';
-import Sidebar from '../components/SideBar';
 
 const Name = () => {
   const [games, setGames] = useState([]);
@@ -35,7 +34,6 @@ const Name = () => {
 
   return (
     <div className='content'>
-      <Sidebar></Sidebar>
       <h1>Clasificación por Nombre</h1>
       <Filters onGenreChange={handleGenreChange} onPlatformChange={handlePlatformChange} />
       <GameList games={games} />

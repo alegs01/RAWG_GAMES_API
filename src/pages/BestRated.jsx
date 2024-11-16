@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { fetchGames } from '../services/apiRawrg';
 import GameList from '../components/GameList';
 import Filters from '../components/Filters';
-import Sidebar from '../components/SideBar';
 import './BestRated.css'
 
 const BestRated = () => {
@@ -36,7 +35,6 @@ const BestRated = () => {
 
   return (
     <div className='content'>
-      <Sidebar></Sidebar>
       <h1>Mejores Rating</h1>
       <Filters onGenreChange={handleGenreChange} onPlatformChange={handlePlatformChange} />
       <GameList games={games} />

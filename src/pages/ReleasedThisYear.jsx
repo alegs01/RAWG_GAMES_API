@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { fetchGamesYear } from '../services/apiRawrg';
 import GameList from '../components/GameList';
 import Filters from '../components/Filters';
-import Sidebar from '../components/SideBar';
 
 const ReleasedThisYear = () => {
   const [games, setGames] = useState([]);
@@ -36,7 +35,6 @@ const ReleasedThisYear = () => {
 
   return (
     <div className='content'>
-      <Sidebar />
       <h1>Juegos Lanzados en 2024</h1>
       <Filters onGenreChange={handleGenreChange} onPlatformChange={handlePlatformChange} />
       <GameList games={games} />
