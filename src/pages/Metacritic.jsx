@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchGames } from '../services/apiRawrg';
 import GameList from '../components/GameList';
 import Filters from '../components/Filters';
-import Sidebar from '../components/SideBar';
+
 
 const Metacritic = () => {
   const [games, setGames] = useState([]);
@@ -35,7 +35,6 @@ const Metacritic = () => {
 
   return (
     <div className='content'>
-      <Sidebar></Sidebar>
       <h1>Mejor Metacritic</h1>
       <Filters onGenreChange={handleGenreChange} onPlatformChange={handlePlatformChange} />
       <GameList games={games} />

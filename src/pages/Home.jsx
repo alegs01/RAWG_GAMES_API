@@ -1,9 +1,7 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import Filters from '../components/Filters';
-import Sidebar from '../components/SideBar';
 import GameList from '../components/GameList';
-import NewsArticles from '../components/Articles';
 import { fetchGames } from '../services/apiRawrg';
 import './Home.css';
 import Carousel from 'react-bootstrap/Carousel';
@@ -13,7 +11,6 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const [selectedGenre, setSelectedGenre] = useState('');
   const [selectedPlatform, setSelectedPlatform] = useState('');
-  const newsRef = useRef(null);
 
   useEffect(() => {
     const fetchInitial = async () => {
@@ -41,16 +38,16 @@ const Home = () => {
     setPage((prevPage) => prevPage + 1);
   };
 
-   const handleScrollToNews = () => {
+/*    const handleScrollToNews = () => {
     if (newsRef.current) {
       newsRef.current.scrollIntoView({ behavior: 'smooth' });
     }
-  };
+  }; */
 
   return (
+    <div className='content'>
     <div className="homepage">
-      <Sidebar onNewsClick={handleScrollToNews}/>
-      <div className="content">
+      <div>
         <header>
           <h1 className='title'>Bienvenido a <h1 className='title-name'> &nbsp;Games API</h1></h1>
           <p>Encuentra tus juegos favoritos y explora nuevos lanzamientos.</p>
@@ -111,12 +108,8 @@ const Home = () => {
             </button>
           )}
         </section>
-
-        <section ref={newsRef} className="news">
-          <h2>Noticias Recientes</h2>
-          <NewsArticles />
-        </section>
       </div>
+    </div>
     </div>
   );
 };

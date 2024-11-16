@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchGameDetails } from '../services/apiRawrg';
-import Sidebar from '../components/SideBar';
 
 const GameDetailed = () => {
   const { slug } = useParams(); 
@@ -19,7 +18,6 @@ const GameDetailed = () => {
 
   return (
     <div className='content'>
-    <Sidebar></Sidebar>
     <div className="game-detail">
       <h1>{game.name}</h1>
       <img src={game.background_image} alt={game.name} />
