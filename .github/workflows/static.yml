@@ -3,29 +3,32 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main # Cambia 'main' por tu rama principal si es necesario.
+      - main # Cambia 'main' si tu rama principal es diferente
+
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16' # Asegúrate de usar la versión correcta de Node.js.
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16' # Cambia a la versión que necesitas
 
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Build project
-        run: npm run build
+    - name: Build project
+      run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist # Asegúrate de que esta ruta coincide con tu carpeta de salida.
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
