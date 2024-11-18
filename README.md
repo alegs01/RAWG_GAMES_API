@@ -17,6 +17,10 @@ Esta es una aplicación web que permite a los usuarios explorar y encontrar info
 - **Backend**: Node.js
 - **API**: RAWG
 
+## Link de Despliegue en Netlify
+
+- https://673ab271d6c7d70008118245--rad-shortbread-63cbb2.netlify.app/
+
 ## Requisitos Previos
 
 Asegúrate de tener instalados los siguientes componentes en tu máquina:
